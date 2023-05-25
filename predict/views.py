@@ -23,6 +23,9 @@ import pickle
 def home(request):
   return render(request, "home.html")
 
+def about(request):
+  return render(request, "about.html")
+
 def predict(request):
   df_yield = pd.read_csv('yield.csv')
   # df_yield.shape
@@ -202,12 +205,3 @@ def predict(request):
     "year" : Year,
     "result" : prediction[0]
   })
-
-
-
-
-
-
-
-
-
